@@ -7,6 +7,7 @@ Finalmente, el proyecto no llegó a buen fin debido a la conjunción de una seri
 Aquí podrás encontrar el código fuente del proyecto en su última versión, así como la estructura de las bases de datos que empleaba para funcionar.
 
 No se da ninguna garantía de que el código funcione correctamente, la configuración se realiza en el archivo version.php
+
 Las funciones encargadas de sacar los datos de las web de transporte se encuentran dentro de la carpeta libs/
 
 Todo el código del proyecto está liberado mediante la licencia detallada en el archivo LICENSE.
