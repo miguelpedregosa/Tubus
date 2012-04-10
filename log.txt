@@ -1,0 +1,22 @@
+Registro de cambios en la aplicación web y servicio de datos de Tubus.
+
+
+**** Versión 1.20 - Agosto 2011  ***
+- Eliminado el mensaje de aviso sobre los datos en Tubus Granada, vuelta a la normalidad.
+- Añadido soporte para pre-renderizado de algunas páginas de Tubus en los navegadores que soporten esta técnica.
+- Se elimina el geoposicionamiento automático del usuario en las páginas de las paradas en Tubus.
+- Añadido, en la página de una parada, un enlace para "Localizar" al usuario en el mapa que muestra la parada actual y las más cercanas.
+
+
+
+
+**** Versión 1.19 - Julio 2011  ***
+- Versión inicial de log, a partir de la cual se empiezan a anotar los cambios en este archivo.
+
+Contactar con tubus:	contacto@tubus.es
+						info@tubus.es
+						
+Blog:					http://blog.tubus.es
+Status del servicio:	http://status.tubus.es	
+
+

@@ -1,0 +1,34 @@
+/* TEAM */
+	Founder & CTO: Miguel Angel Pedregosa
+	Site: http://miguel.pedregosa.net/
+	Twitter: @miguelpedregosa
+	Location: Granada (Spain)
+
+	Founder & Developer: Jose Antonio Lopez
+	Site: http://lopezanguita.com/
+	Twitter: @JoseAntonio1982
+	Location: Granada (Spain)
+
+	Founder & Web art director: Cesar Santiago
+	Site: http://enfaserem.net/
+	Twitter: @csm_web
+	Location: Granada (Spain)
+
+	CEO: Jeronimo Palacios
+	Site: http://jeronimopalacios.com/
+	Twitter: @giropa832
+	Location: Granada (Spain)
+
+/* THANKS */
+	Thank you so much to all our relatives and friends for their support and help every day.
+	Thanks to our betatester for help us to make a better tool.
+	
+	Betatester (and Twitter):
+	
+	
+
+/* SITE */
+	Last update: 2011/006/01
+	Standards: HTML5, CSS3
+	Components: Modernizr, jQuery, Google Maps
+	Source: No released yet!

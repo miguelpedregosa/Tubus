@@ -1,0 +1,159 @@
+function initiate_geolocation_menu() {
+        if (navigator.geolocation)
+        {
+            navigator.geolocation.getCurrentPosition(handle_geolocation_query_menu, handle_errors_menu, {enableHighAccuracy:true});
+        }
+        else
+        {
+            gl = google.gears.factory.create('beta.geolocation');
+            if(gl != null){
+                gl.getCurrentPosition(handle_geolocation_query_menu, handle_errors_menu, {enableHighAccuracy:true});
+            }
+            else{
+                //yqlgeo.get('visitor', normalize_yql_response);
+            }
+        }
+}
+
+
+function handle_errors_menu(error)
+{
+        switch(error.code)
+        {
+            case error.PERMISSION_DENIED: 
+                alert("Debes dar permiso para acceder a tu localizacion ");
+                //$('#georesultados').html('<p class="info_general">Debes dar permiso para acceder a tu localización</p>');
+                //$('#mini-ajax').hide();
+            break;
+
+            case error.POSITION_UNAVAILABLE: 
+                alert("No se ha podido detectar tu posicion actual");
+                //$('#georesultados').html('<p class="info_general">No se ha podido detectar tu posicion actual</p>');
+                //$('#mini-ajax').hide();
+            break;
+
+            case error.TIMEOUT: 
+                alert("Tiempo de espera agotado");
+                //$('#georesultados').html('<p class="info_general">Tiempo de espera agotado</p>');
+                //$('#mini-ajax').hide();
+            break;
+
+            default: 
+                alert("Error desconocido");
+                //$('#georesultados').html('<p class="info_general">Error desconocido</p>');
+                //$('#mini-ajax').hide();
+            break;
+        }
+}
+
+function handle_geolocation_query_menu(position){
+		milat = position.coords.latitude;
+		milong = position.coords.longitude;
+        jQuery("#menulat").val(milat);
+        jQuery("#menulong").val(milong);
+        //alert('Coordenadas: '+milat+' '+milong);
+        jQuery("#geomenu").submit();
+}
+
+function generateCoverDiv(id, color, opacity)
+{
+	var navegador=1;
+	if(navigator.userAgent.indexOf("MSIE")>=0){ 
+		navegador=0;
+		//alert('IE detectado');
+	}
+	var layer=document.createElement('div');
+	layer.id=id;
+	layer.style.width=document.body.offsetWidth+'px';
+	layer.style.height=document.body.offsetHeight+'px';
+	layer.style.backgroundColor=color;
+	layer.style.position='absolute';
+	layer.style.top=0;
+	layer.style.left=0;
+	layer.style.zIndex=10;
+	if(navegador==0) layer.style.filter='alpha(opacity='+opacity+')';
+	else {
+		layer.style.opacity=opacity/100;
+	    }
+	document.body.appendChild(layer);
+}
+
+function generar_oscuridad(id, color, opacity)
+{
+	var navegador=1;
+	if(navigator.userAgent.indexOf("MSIE")>=0){ 
+		navegador=0;
+		//alert('IE detectado');
+	}
+	else if(navigator.userAgent.indexOf("BlackBerry")>=0 && (navigator.userAgent.indexOf("5.")>=0 || navigator.userAgent.indexOf("4.")>=0 ) )
+	{
+		//alert("Blackberry a la vista");
+		navegador=2;
+	}
+	
+	var layer=document.createElement('div');
+	layer.id=id;
+	layer.style.width=document.body.offsetWidth+'px';
+	layer.style.height=document.body.offsetHeight+'px';
+	if(navegador != 2)
+		layer.style.backgroundColor=color;
+	else {
+		layer.style.backgroundColor="transparent";
+		layer.style.backgroundImage="url(style/blackberry_fondo.png)";
+		layer.style.backgroundRepeat = "repeat";
+		
+		}
+		
+	layer.style.position='absolute';
+	layer.style.top=0;
+	layer.style.left=0;
+	layer.style.zIndex=10;
+	
+	
+	if(navegador==0) layer.style.filter='alpha(opacity='+opacity+')';
+	
+	else if(navegador==1) {
+		layer.style.opacity=opacity/100;
+	}
+	
+	document.body.appendChild(layer);
+}
+
+function toggle_menu(){
+
+    var desplegado = false;
+    jQuery("#desplegador").click(function(event){
+            event.preventDefault();
+            jQuery("#menu").slideToggle();
+            if(desplegado == false){
+                desplegado = true;
+                generar_oscuridad('oscuridad', '#000000', 20);
+                jQuery("#mennu").attr('class', 'desplegador-si');
+            }
+            else{
+                desplegado = false;
+                jQuery('#oscuridad').remove();
+                jQuery("#mennu").attr('class', 'desplegador-no');
+            }
+            
+    });
+    
+   
+
+    jQuery("#geomenubtn").click(function(event){
+            event.preventDefault();
+            //$('#mini-ajax').show(); 
+            initiate_geolocation_menu();
+            //alert('Hola');
+    });
+
+}
+
+function toggle_geobutton(){
+jQuery("#geomenubtn").click(function(event){
+            event.preventDefault();
+            //$('#mini-ajax').show(); 
+            initiate_geolocation_menu();
+            //alert('Hola');
+    });
+}

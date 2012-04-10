@@ -1,0 +1,23 @@
+.lafour{
+margin-top:-43px;
+}
+#datos_parada h3#actualizador a {
+margin-right:-80px;
+position:relative;
+z-index:9;
+float:right;
+}
+#sub-cont p.no-parada {
+width:95%;
+}
+.resultados-buqueda h2,.resultados-buqueda h3,.resultados-buqueda p {
+width:80%;
+}
+.desplegador-si,.desplegador-no {
+width:22px;
+height:20px;
+}
+.contenedor90 {
+width:100%;
+margin:auto;
+}
