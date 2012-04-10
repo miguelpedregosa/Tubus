@@ -1,1 +1,7 @@
-PROBANDO PROBANDO
+Tubus era un proyecto que prentendía mejorar la forma en que usamos el transporte urbano en nuestras ciudades, permitiendo conocer en tiempo real las llegadas de autobuses urbanos a las paradas de casi una veintena de ciudades españolas.
+Pensado especialmente para terminales móviles inteligentes, Tubus hacía de uso de las últimas tecnologías disponibles para actualizar la información de las lllegadas de formas automática, ubicar al usario y a las paradas, trazar rutas desde nuestra posición a las paradas más cercanas, ...
+Finalmente, el proyecto no llegó a buen fin debido a la conjunción de una series de factores en su contra.
+Aquí podrás encontrar el código fuente del proyecto en su última versión, así como la estructura de las bases de datos que empleaba para funcionar.
+No se da ninguna garantía de que el código funcione correctamente, la configuración se realiza en el archivo version.php
+Las funciones encargadas de sacar los datos de las web de transporte se encuentran dentro de la carpeta libs/
+Todo el código del proyecto está liberado mediante la licencia detallada en el archivo LICENSE.
